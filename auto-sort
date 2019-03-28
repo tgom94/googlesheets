@@ -2,9 +2,9 @@ function onEdit(event){
   var sheet = event.source.getActiveSheet();
   var editedCell = sheet.getActiveCell();
 
-  // Defina o range dos dados na planilha
+  // Set up the range within the table that has data input.
   var tableRange = "A2:F";
-  // Selecione o índice da coluna a ser ordenada, onde 1=A, 2=B, [...]
+  // Select the column index which you want to sort by, where 1=column A, 2=column B, [...]
   var columnToSortBy = 6;
   
   if(editedCell.getColumn() == columnToSortBy){   
