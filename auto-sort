@@ -1,0 +1,14 @@
+function onEdit(event){
+  var sheet = event.source.getActiveSheet();
+  var editedCell = sheet.getActiveCell();
+
+  // Defina o range dos dados na planilha
+  var tableRange = "A2:F";
+  // Selecione o índice da coluna a ser ordenada, onde 1=A, 2=B, [...]
+  var columnToSortBy = 6;
+  
+  if(editedCell.getColumn() == columnToSortBy){   
+    var range = sheet.getRange(tableRange);
+    range.sort( { column : columnToSortBy, ascending : false } );
+  }
+}
